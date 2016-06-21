@@ -1,0 +1,17 @@
+<%- partial('_partial/head') %>
+<body>
+  <div id="container">
+    <div class="left-col <% if(is_post() && !theme.init_show_col) { %>left-col-pulled<% } %> col-pulled-smooth"
+         id="<% if(is_post()) { %>post-left-col<% } %>">
+    <%- partial('_partial/left-col', null, {cache: !config.relative_link}) %>
+    </div>
+    <div class="mid-col <% if(is_post() && !theme.init_show_col) { %>mid-col-pulled<% } %> col-pulled-smooth"
+         id="<% if(is_post()) { %>post-mid-col<% } %>">
+      <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
+      <div class="body-wrap"><%- body %></div>
+      <%- partial('_partial/footer') %>
+    </div>
+    <%- partial('_partial/after-footer') %>
+  </div>
+</body>
+</html>

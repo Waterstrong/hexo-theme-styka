@@ -1,0 +1,48 @@
+<div id="toc" class="toc-article <% if (!theme.init_show_toc) { %>hide <% } if(!theme.init_show_col) { %>left-col-pulled<% } %> toc-pulled-smooth">
+    <strong class="toc-title">文章目录</strong>
+    <%- toc(post.content) %>
+</div>
+<input type="button" id="tocButton" class="<% if(!theme.init_show_col) { %>left-col-pulled<% } %> toc-pulled-smooth"
+       value="<% if (theme.init_show_toc) { %>隐藏目录<% } else { %>显示目录<% } %>"
+       title="点击按钮隐藏或者显示文章目录">
+
+<%- js('/js/require-jquery.min.js') %>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    });
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+<% if (theme.toc_nowrap) { %>
+    <style>
+        .toc {
+            white-space: nowrap;
+            overflow-x: hidden;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function() {
+            $(".toc li a").mouseover(function() {
+                var title = $(this).attr('href');
+                $(this).attr("title", title);
+            });
+        })
+    </script>
+<% } %>

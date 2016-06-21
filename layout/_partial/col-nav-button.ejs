@@ -1,0 +1,60 @@
+<% if (is_post()){ %>
+<div class="scroll <% if(!theme.init_show_col) { %>left-col-pulled<% } %> col-pulled-smooth" id="col-nav-button">
+    <a id="switch-sidebar"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+</div>
+
+<script>
+    (function ($) {
+        var SidebarNav = function () {
+            this.$sidebarNavBtn = $("#switch-sidebar");
+            this.leftColPulled = "left-col-pulled";
+            this.midColPulled = "mid-col-pulled";
+            this.$leftColSelector = $("#post-left-col");
+            this.$midColSelector = $("#post-mid-col");
+            this.$navBtnSelector = $("#col-nav-button");
+            this.$scrollSelector = $("#scroll");
+            this.$tocTitleSelector = $("#toc");
+            this.$tocButtonSelector = $("#tocButton");
+        };
+
+        SidebarNav.prototype = {
+            run: function () {
+                var self = this;
+                self.$sidebarNavBtn.click(function () {
+                    self.isSidebarShown() ? self.hideSidebar() : self.showSidebar();
+                });
+            },
+            showSidebar: function () {
+                var self = this;
+                self.$leftColSelector.removeClass(self.leftColPulled);
+                self.$midColSelector.removeClass(self.midColPulled);
+                self.$navBtnSelector.removeClass(self.leftColPulled);
+                self.$scrollSelector.removeClass(self.midColPulled);
+                setTimeout(function() {
+                    self.$tocTitleSelector.removeClass(self.leftColPulled);
+                    self.$tocButtonSelector.removeClass(self.leftColPulled);
+                }, 350);
+            },
+            hideSidebar: function () {
+                var self = this;
+                self.$leftColSelector.addClass(self.leftColPulled);
+                self.$midColSelector.addClass(self.midColPulled);
+                self.$navBtnSelector.addClass(self.leftColPulled);
+                self.$scrollSelector.addClass(self.midColPulled);
+                setTimeout(function() {
+                    self.$tocTitleSelector.addClass(self.leftColPulled);
+                    self.$tocButtonSelector.addClass(self.leftColPulled);
+                }, 350);
+            },
+            isSidebarShown: function () {
+                var self = this;
+                return !self.$leftColSelector.hasClass(self.leftColPulled);
+            }
+        };
+
+        $(document).ready(function () {
+            new SidebarNav().run();
+        });
+    })(jQuery);
+</script>
+<% } %>
