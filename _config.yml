@@ -95,7 +95,7 @@ left_col_width: 291
 init_show_col: false
 
 # 初始状态时是否显示目录
-init_show_toc: false
+init_show_toc: true
 
 # 目录中标题不换行
 # Keep TOC title on the same line | 
