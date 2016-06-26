@@ -9,7 +9,7 @@
 ## About Page: `hexo new page about`
 ## Tags Cloud Page: `hexo new page tags`
 menu:
-  Home: http://waterstrong.me
+  Home: /
   Archives: /archives
   Tag Cloud: /tags
   About: /about
@@ -27,17 +27,17 @@ favicon: /img/favicon.png
 ## Sitemap 安装对应插件 hexo-generator-sitemap
 ## https://github.com/hexojs/hexo-generator-feed
 subnav:
-  Email: "mailto:sqlin@thoughtworks.com"
-  Github: "http://github.com/waterstrong"
-  Wechat: "img/qrcode.png"
+  Email: "#"
+  Github: "#"
+  Wechat: "#"
 #  QQ: "#"
-  Weibo: "http://weibo.com/waterstrong"
-#  Twitter: "https://twitter.com/shuiqianglin"
-  Facebook: "https://www.facebook.com/linshuiqiang"
-  StackOverflow: "http://stackoverflow.com/users/6448085/waterstrong"
-  #  Zhihu: "zhihu"
+  Weibo: "#"
+#  Twitter: "#"
+  Facebook: "#"
+  StackOverflow: "#"
+  #  Zhihu: "#"
   #  Douban: "#"
-  LinkedIn: "https://cn.linkedin.com/in/shuiqiang-lin-191a0a112"
+  LinkedIn: "#"
   RSS: /atom.xml
   # Google: "#"
   # PayPal: "#"
@@ -51,13 +51,13 @@ subnav:
 
 disqus: 
   on: false
-  shortname: waterstrongblog
+  shortname:
   # https://help.disqus.com/customer/en/portal/articles/466208-what-s-a-shortname-
   # It is unnecessary to enable disqus here if you have set "disqus_shortname" in your site's "_config.yml"
 
 duoshuo: 
-  on: true
-  domain: waterstrong
+  on: false
+  domain:
   # 是否开启多说评论，http://duoshuo.com/create-site/
   # 使用上面网址登陆你的多说，然后创建站点，在 domain 中填入你设定的域名前半部分
   # http://<要填的部分>.duoshuo.com (domain只填上<>里的内容，不要填整个网址)
@@ -108,13 +108,13 @@ toc_nowrap: false
 
 # 自定义"阅读全文"链接按钮的显示文字
 # Customize the text on excerpt link
-excerpt_link: more #修改more>>的文字
+excerpt_link: more # 修改more>>的文字
 
 # 是否显示边栏中的搜索框（仅样式，未添加搜索功能）
 # Search Box in left column
 search_box: true
 # Your swiftype install key
-swiftype_install_key: kWrco8T5WiVvGAF--sSf
+swiftype_install_key:
 
 # 是否开启主页及加载头像时的动画效果
 # Animation in Homepage and Loading avatar
@@ -130,15 +130,15 @@ jquery_ui: true
 # Birdhouse button in left column
 tagcloud: true
 
+
 # Blogroll, Link exchange | 友情链接
 # friends: false
 friends:
-  Koly: http://koly.me/
-  luuman: http://luuman.github.io/
+  Waterstrong: http://waterstrong.me/
 
 
 #是否开启“关于我”。
-aboutme: I'm Waterstrong! The man who has made up his mind to win will never say "Impossible"!
+aboutme: "Hello World! This is me!"
 
 # 是否在新窗口打开链接
 # Open ALL link in a new tab
@@ -165,13 +165,13 @@ showshare: false
 
 # 百度、谷歌站长验证。填写 HTML 标签 content
 # Site Verification for Google and Baidu. HTML label content.
-google_site: # 3uYD_HHAdzktaAWksT5naJ9iaR3GD25DNI77eRoqYlI
-baidu_site: 9122feae2de1ae23df6a837a7c898ef1
+google_site:
+baidu_site:
 
 # Fill in Google Analytics tracking ID, #e.g. UA-XXXXX-X
-google_analytics: # UA-75679138-1
+google_analytics:
 # Fill Baidu Analytics hash key
-baidu_analytics: 0eebfc18021c9d6853ca20f45d03d4a1
+baidu_analytics:
 
 # 不蒜子网站计数设置
 # http://ibruce.info/2015/04/04/busuanzi/
