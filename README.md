@@ -1,7 +1,7 @@
 # hexo-theme-styka
 A gorgeous and elegant theme for Hexo. http://blog.waterstrong.me
 
-** STYKA Hexo主题：之前用了一段时间的spfk主题，黑色主题加页面效果很酷炫的，作为一名程序猿更钟情于黑色的，但对于阅读者来说黑色并不是太友好，然后尝试用了tranquilpeak主题，白色主题简洁清爽，然后尝试着把两者结合一下，各取其长，粗略改了一下，还有很多不完善的地方，大家可以提Issue，当然能直接提Pull Request更好了。**
+**STYKA Hexo主题：之前用了一段时间的spfk主题，黑色主题加页面效果很酷炫的，作为一名程序猿更钟情于黑色的，但对于阅读者来说黑色并不是太友好，然后尝试用了tranquilpeak主题，白色主题简洁清爽，然后尝试着把两者结合一下，各取其长，粗略改了一下，还有很多不完善的地方，大家可以提Issue，当然能直接提Pull Request更好了。**
 
 #### 版本更新
 v0.1 2016-06-20
