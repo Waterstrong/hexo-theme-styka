@@ -12,6 +12,7 @@
             this.$leftColSelector = $("#post-left-col");
             this.$midColSelector = $("#post-mid-col");
             this.$navBtnSelector = $("#col-nav-button");
+            this.$homeBtnSelector = $("#home-nav-button");
             this.$scrollSelector = $("#scroll");
             this.$tocTitleSelector = $("#toc");
             this.$tocButtonSelector = $("#tocButton");
@@ -29,6 +30,7 @@
                 self.$leftColSelector.removeClass(self.leftColPulled);
                 self.$midColSelector.removeClass(self.midColPulled);
                 self.$navBtnSelector.removeClass(self.leftColPulled);
+                self.$homeBtnSelector.removeClass(self.midColPulled);
                 self.$scrollSelector.removeClass(self.midColPulled);
                 setTimeout(function() {
                     self.$tocTitleSelector.removeClass(self.leftColPulled);
@@ -40,6 +42,7 @@
                 self.$leftColSelector.addClass(self.leftColPulled);
                 self.$midColSelector.addClass(self.midColPulled);
                 self.$navBtnSelector.addClass(self.leftColPulled);
+                self.$homeBtnSelector.addClass(self.midColPulled);
                 self.$scrollSelector.addClass(self.midColPulled);
                 setTimeout(function() {
                     self.$tocTitleSelector.addClass(self.leftColPulled);
@@ -54,7 +57,7 @@
 
         $(document).ready(function () {
             new SidebarNav().run();
-        });
+        })
     })(jQuery);
 </script>
 <% } %>
